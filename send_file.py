@@ -7,7 +7,7 @@ import progressbar
 s = socket.socket()  # Create a socket object
 file = sys.argv[1]
 host = sys.argv[2]  # Get local machine name
-port = sys.argv[3]  # Reserve a port for your service.
+port = int(sys.argv[3])  # Reserve a port for your service.
 
 s.connect((host, port))  # establish connection
 print('Sending filename...')
