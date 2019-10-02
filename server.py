@@ -58,7 +58,7 @@ def main():
     # so if we close and imidiatly start server again – we'll get error
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     # listen to all interfaces at 8800 port
-    sock.bind(('', 1234))
+    sock.bind(('', 3333))
     sock.listen()
     while True:
         # blocking call, waiting for new client to connect
