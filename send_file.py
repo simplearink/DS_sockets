@@ -5,7 +5,7 @@ import time
 import progressbar
 
 s = socket.socket()  # Create a socket object
-host = 'localhost'  # Get local machine name
+host = '3.15.185.123'  # Get local machine name
 port = 1234  # Reserve a port for your service.
 file = sys.argv[1]
 

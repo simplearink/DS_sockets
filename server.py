@@ -28,6 +28,7 @@ class ClientListener(Thread):
             if data:
                 if len(filename) == 0:
                     filename = data.decode()
+                    print("Start receiving file %s" % filename)
                 else:
                     file_buffer += data
             else:
@@ -41,6 +42,7 @@ class ClientListener(Thread):
                     new_filename = new_filename % str(copy)
                 file = open(new_filename, 'wb')
                 file.write(file_buffer)
+                print("%s received" % new_filename)
                 # if we got no data – client has disconnected
                 self._close()
                 # finish the thread
